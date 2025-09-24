@@ -1,3 +1,4 @@
+// cargo run --example splits --target $(rustc -vV | sed -n 's|host: ||p')
 // cargo run --example splits --target aarch64-apple-darwin
 // cargo run --example splits --target x86_64-apple-darwin
 
@@ -31,11 +32,17 @@ fn main() -> std::io::Result<()> {
                 .map(|o| {
                     let RadioButtonOption {
                         key,
+                        alias,
                         description,
                         tooltip,
                         ..
                     } = o;
-                    json!({ "key": key, "description": description, "tooltip": tooltip })
+                    json!({
+                        "key": key,
+                        "alias": alias,
+                        "description": description,
+                        "tooltip": tooltip
+                    })
                 })
                 .collect(),
         );
