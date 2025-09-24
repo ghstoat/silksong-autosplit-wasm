@@ -328,6 +328,29 @@ fn default_splits_init() -> asr::settings::Map {
     }
     let l = asr::settings::List::new();
     l.push(options_str(&splits::Split::StartNewGame));
+    l.push(options_str(&splits::Split::MossMother));
+    l.push(options_str(&splits::Split::SilkSpear));
+    l.push(options_str(&splits::Split::BellBeast));
+    l.push(options_str(&splits::Split::SwiftStep));
+    l.push(options_str(&splits::Split::Lace1));
+    l.push(options_str(&splits::Split::DriftersCloak));
+    l.push(options_str(&splits::Split::EnterGreymoor));
+    l.push(options_str(&splits::Split::Moorwing));
+    l.push(options_str(&splits::Split::ClingGrip));
+    l.push(options_str(&splits::Split::Widow));
+    l.push(options_str(&splits::Split::EnterMist));
+    l.push(options_str(&splits::Split::LeaveMist));
+    l.push(options_str(&splits::Split::Phantom));
+    l.push(options_str(&splits::Split::Act2Started));
+    l.push(options_str(&splits::Split::CogworkDancers));
+    l.push(options_str(&splits::Split::Trobbio));
+    l.push(options_str(&splits::Split::Clawline));
+    l.push(options_str(&splits::Split::VaultkeepersMelody));
+    l.push(options_str(&splits::Split::ArchitectsMelody));
+    l.push(options_str(&splits::Split::EnterHighHalls));
+    l.push(options_str(&splits::Split::EnterHighHallsArena));
+    l.push(options_str(&splits::Split::ConductorsMelody));
+    l.push(options_str(&splits::Split::Lace2));
     l.push(options_str(&splits::Split::EndingSplit));
     loop {
         let old = asr::settings::Map::load();
